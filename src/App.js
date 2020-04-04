@@ -39,14 +39,14 @@ export default class App extends Component {
     })
   }
   route = () => {
-    let tenItem = this.state.data.length / 10
+    let tenItem = parseInt(this.state.data.length / 10)
     let arr = []
     for (let i = 0; i < tenItem; i++) {
-      let allItem = this.state.data.map((d) => {
+      let allItem = this.state.data.map((d, i) => {
         let preview = require(`./media/preview${d.id}.mp4`)
         let logo = require(`./media/${d.id}.jpg`)
         return (
-          <Card number={this.state.data.length} src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} />
+          <Card number={this.state.data.length} src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={(i) => this.clickme(i)} />
         )
       })
       let newArrayItem = []
@@ -65,6 +65,13 @@ export default class App extends Component {
     }
     return arr
   }
+  homeClick = (e) => {
+    if (e === 0) {
+      this.setState({
+        data: Data
+      })
+    }
+  }
 
   button = () => {
     let item = this.state.data.length / 10
@@ -76,9 +83,9 @@ export default class App extends Component {
         s = '/'
       }
       arr.push(
-        <div style={{ marginRight: '7px', display: 'inline-block' }}>
-          <Link to={s} key={i} >
-            <button >
+        <div style={{ marginRight: '7px', display: 'inline-block' }} key={i}>
+          <Link to={s}  >
+            <button onClick={() => { this.homeClick(i) }}  >
               {i + 1}
             </button>
           </Link >
@@ -154,7 +161,7 @@ export default class App extends Component {
               <button className="br3 pa1 bg-light-green mh5 " style={{ display: 'block' }} onClick={this.click2}>
                 Back
             </button>
-              <iframe width="60%" height="600" src={this.state.src} title="av" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+              <iframe width="60%" height="600" src={this.state.src} title="av" frameBorder="0" allow="accelerometer; autoPlay; encrypted-media; gyroscope;
 picture-in-picture" allowFullScreen></iframe>
             </div>
           </Scroll>
