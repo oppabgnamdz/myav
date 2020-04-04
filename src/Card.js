@@ -17,7 +17,7 @@ export default class Card extends Component {
         let index = this.props.keys
         return (
             <div className="bg-light-green dib  br3 pa3 ma2 grow bw2 shadow-5 mt5">
-                <h1>Phim {this.props.name}</h1>
+                <h1>{this.props.name}</h1>
                 <button
                     onClick={() => this.props.click(index)}
                     href={this.props.href}><video
