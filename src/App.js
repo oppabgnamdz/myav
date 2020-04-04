@@ -1,4 +1,10 @@
 import React, { Component } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import Card from './Card';
 import Data from './Data'
 import Scroll from './Scroll';
@@ -15,7 +21,6 @@ export default class App extends Component {
   do = (e) => {
     const edit = e.target.value
     this.setState((state) => {
-      console.log(state.data)
       let arr = Data.filter((d) => d.name.toLowerCase().includes(edit.toLowerCase()))
       return { data: arr }
     })
@@ -33,14 +38,57 @@ export default class App extends Component {
       click: false
     })
   }
+  route = () => {
+    let tenItem = this.state.data.length / 10
+    let arr = []
+    for (let i = 0; i < tenItem; i++) {
+      let allItem = this.state.data.map((d) => {
+        let preview = require(`./media/preview${d.id}.mp4`)
+        let logo = require(`./media/${d.id}.jpg`)
+        return (
+          <Card number={this.state.data.length} src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} />
+        )
+      })
+      let newArrayItem = []
+      for (let j = (i + 1) * 10; j < (i + 2) * 10; j++) {
+        newArrayItem.push(allItem[j])
+      }
+
+      let s = `/${i + 2}`
+      arr.push(
+        <Route path={s} key={i}>
+          <Scroll>
+            {newArrayItem}
+          </Scroll>
+        </Route>
+      )
+    }
+    return arr
+  }
+
   button = () => {
     let item = this.state.data.length / 10
     let arr = []
+
     for (let i = 0; i < item; i++) {
+      let s = `/${i + 1}`
+      if (i === 0) {
+        s = '/'
+      }
       arr.push(
-        <button>{i + 1}</button>
+        <div style={{ marginRight: '7px', display: 'inline-block' }}>
+          <Link to={s} key={i} >
+            <button >
+              {i + 1}
+            </button>
+          </Link >
+        </div>
+
       )
     }
+
+
+
     return arr;
   }
 
@@ -51,7 +99,7 @@ export default class App extends Component {
         let preview = require(`./media/preview${d.id}.mp4`)
         let logo = require(`./media/${d.id}.jpg`)
         return (
-          <Card src={preview} poster={logo} keys={i} name={d.name} href={d.href} click={(i) => this.clickme(i)} />
+          <Card src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
         )
       }
       )
@@ -63,22 +111,34 @@ export default class App extends Component {
     }
     if (!this.state.click) {
       return (
-        <div className='tc '>
-          <div className='pa2'>
-            <input
-              placeholder="Search video name"
-              className='pa3 ba b--green bg-light-blue'
-              onChange={this.do} />
-          </div>
-          <div className='page'>
-            {this.button()}
-          </div>
-          <Scroll>
-            {card()}
-          </Scroll>
-          <h2 style={{ color: 'red' }}>Thanks for watching!</h2>
+        <Router>
+          <div className='tc '>
+            <div className='pa2'>
+              <input
+                placeholder="Search video name"
+                className='pa3 ba b--green bg-light-blue'
+                onChange={this.do} />
+            </div>
+            <div className='page'>
+              {this.button()}
 
-        </div>
+              <Switch>
+                {this.route()}
+                <Route path='/'>
+                  <Scroll>
+                    {card()}
+                  </Scroll>
+                </Route>
+              </Switch>
+              {this.button()}
+            </div>
+
+            <h2 style={{ color: 'red' }}>Thanks for watching!</h2>
+
+          </div>
+
+        </Router >
+
       )
     } else {
       return (

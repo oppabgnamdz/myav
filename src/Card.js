@@ -3,7 +3,7 @@ import $ from 'jquery'
 
 export default class Card extends Component {
     componentDidMount() {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < this.props.number; i++) {
             $(`.video${i}`).on('mouseenter', () => {
                 $(`.video${i}`).get(0).play();
             })
