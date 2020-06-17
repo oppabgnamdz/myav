@@ -43,7 +43,12 @@ export default class App extends Component {
     let arr = []
     for (let i = 0; i < tenItem; i++) {
       let allItem = this.state.data.map((d, i) => {
-        let preview = require(`./media/preview${d.id}.mp4`)
+        let preview = null;
+        try {
+          preview = require(`./media/preview${d.id}.mp4`)
+        } catch{
+
+        }
         let logo = require(`./media/${d.id}.jpg`)
         return (
           <Card number={this.state.data.length} src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={(i) => this.clickme(i)} />
@@ -85,7 +90,7 @@ export default class App extends Component {
       arr.push(
         <div style={{ marginRight: '7px', display: 'inline-block' }} key={i}>
           <Link to={s}  >
-            <button onClick={() => { this.homeClick(i) }}  >
+            <button style={{ color: 'red', padding: 10, borderWidth: '2px', borderRadius: 5, borderColor: '#1f7cf4', backgroundColor: '#f4efef' }} onClick={() => { this.homeClick(i) }}  >
               {i + 1}
             </button>
           </Link >
@@ -103,7 +108,12 @@ export default class App extends Component {
   render() {
     let card = () => {
       let arr = this.state.data.map((d, i) => {
-        let preview = require(`./media/preview${d.id}.mp4`)
+        let preview = null;
+        try {
+          preview = require(`./media/preview${d.id}.mp4`)
+        } catch{
+
+        }
         let logo = require(`./media/${d.id}.jpg`)
         return (
           <Card src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
