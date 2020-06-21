@@ -116,7 +116,7 @@ export default class App extends Component {
         }
         let logo = require(`./media/${d.id}.jpg`)
         return (
-          <Card src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
+          <Card  src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
         )
       }
       )

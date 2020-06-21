@@ -20,10 +20,13 @@ export default class Card extends Component {
                 <h1>{this.props.name}</h1>
                 <button
                     onClick={() => this.props.click(index)}
-                    href={this.props.href}><video
-                        style={{ width: '300px' }}
+                    href={this.props.href}>
+                    <video  
+                        style={{ width: '300px', height: '200px',backgroundColor:'black' }}
                         src={this.props.src} className={`video${this.props.keys}`} poster={this.props.poster}> Video
-                        ảo</video></button>
+                        ảo
+                        </video>
+                </button>
             </div >
         )
     }
