@@ -699,7 +699,7 @@ const arr = [
     {
         id: 107,
         name: 'JAVCL 36',
-        href: 'https://drive.google.com/file/d/1G0QxG2_tK5IKnyauUonmFg8LlaQegJ2m/view',
+        href: 'https://drive.google.com/file/d/1G0QxG2_tK5IKnyauUonmFg8LlaQegJ2m/preview',
         title: 'In A Place Like This ... 4 Cinema Groper Yet If I Tsu ... Yet! Sanae Asou'
     },
     {
