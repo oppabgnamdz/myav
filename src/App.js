@@ -168,10 +168,12 @@ export default class App extends Component {
           </div>
           <Scroll >
             <div className='mt4'>
-              <button className="br3 pa1 bg-light-green mh5 " style={{ display: 'block' }} onClick={this.click2}>
-                Back
-            </button>
-              <iframe width="60%" height="600" src={this.state.src} title="av" frameBorder="0" allow="accelerometer; autoPlay; encrypted-media; gyroscope;
+              <div className="btn" style={{ marginBottom: '20px' }}>
+                <button  className="br3 pa1 bg-light-green mh5 back" style={{ display: 'block' }} onClick={this.click2}>
+                  Back
+                </button>
+              </div>
+              <iframe width="80%" height="700" src={this.state.src} title="av" frameBorder="0" allow="accelerometer; autoPlay; encrypted-media; gyroscope;
 picture-in-picture" allowFullScreen></iframe>
             </div>
           </Scroll>
