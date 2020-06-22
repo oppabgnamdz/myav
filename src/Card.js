@@ -16,13 +16,15 @@ export default class Card extends Component {
     render() {
         let index = this.props.keys
         return (
-            <div className="bg-light-green dib  br3 pa3 ma2 grow bw2 shadow-5 mt5">
-                <h1>{this.props.name}</h1>
+            <div className="bg-light-green dib  br3 pa3 ma2 grow bw2 shadow-5 mt5" style={{ width: '350px' }}>
+                <h1 style={{ textOverflow: 'ellipsis', overflow: 'hidden' }}>{this.props.name}</h1>
+                <h1 style={{ color: 'orange' }}>{this.props.title}</h1>
                 <button
                     onClick={() => this.props.click(index)}
                     href={this.props.href}>
-                    <video  
-                        style={{ width: '300px', height: '200px',backgroundColor:'black' }}
+                    <video
+                        title={this.props.title}
+                        style={{ width: '300px', height: '200px', backgroundColor: 'black', }}
                         src={this.props.src} className={`video${this.props.keys}`} poster={this.props.poster}> Video
                         ảo
                         </video>

@@ -51,7 +51,7 @@ export default class App extends Component {
         }
         let logo = require(`./media/${d.id}.jpg`)
         return (
-          <Card number={this.state.data.length} src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={(i) => this.clickme(i)} />
+          <Card title={d.title} number={this.state.data.length} src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={(i) => this.clickme(i)} />
         )
       })
       let newArrayItem = []
@@ -116,7 +116,7 @@ export default class App extends Component {
         }
         let logo = require(`./media/${d.id}.jpg`)
         return (
-          <Card  src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
+          <Card title={d.title} src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
         )
       }
       )
