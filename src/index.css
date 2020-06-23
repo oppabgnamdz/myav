@@ -41,3 +41,9 @@ h1{
     overflow: hidden;
   }
 }
+@media (min-width:481px) and (max-width:1099px){
+  iframe{
+    height: 500px;
+    margin-top: 30px;
+  }
+}
