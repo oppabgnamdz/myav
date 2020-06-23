@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/myav/static/css/main.473e9161.chunk.css",
+    "main.css": "/myav/static/css/main.70741ffc.chunk.css",
     "main.js": "/myav/static/js/main.1dc9a7f1.chunk.js",
     "main.js.map": "/myav/static/js/main.1dc9a7f1.chunk.js.map",
     "runtime-main.js": "/myav/static/js/runtime-main.6c6d694c.js",
@@ -9,10 +9,10 @@
     "static/js/2.5cda0cf4.chunk.js": "/myav/static/js/2.5cda0cf4.chunk.js",
     "static/js/2.5cda0cf4.chunk.js.map": "/myav/static/js/2.5cda0cf4.chunk.js.map",
     "index.html": "/myav/index.html",
-    "precache-manifest.1f132042fc511b256cebb45b253cfb47.js": "/myav/precache-manifest.1f132042fc511b256cebb45b253cfb47.js",
+    "precache-manifest.f44a1b1eef90dbd32e48cc40a444d8ab.js": "/myav/precache-manifest.f44a1b1eef90dbd32e48cc40a444d8ab.js",
     "service-worker.js": "/myav/service-worker.js",
     "static/css/2.3b6f1bda.chunk.css.map": "/myav/static/css/2.3b6f1bda.chunk.css.map",
-    "static/css/main.473e9161.chunk.css.map": "/myav/static/css/main.473e9161.chunk.css.map",
+    "static/css/main.70741ffc.chunk.css.map": "/myav/static/css/main.70741ffc.chunk.css.map",
     "static/js/2.5cda0cf4.chunk.js.LICENSE.txt": "/myav/static/js/2.5cda0cf4.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/myav/static/media/1.da24cb2f.jpg",
     "static/media/10.jpg": "/myav/static/media/10.a62edb3d.jpg",
@@ -153,7 +153,7 @@
     "static/js/runtime-main.6c6d694c.js",
     "static/css/2.3b6f1bda.chunk.css",
     "static/js/2.5cda0cf4.chunk.js",
-    "static/css/main.473e9161.chunk.css",
+    "static/css/main.70741ffc.chunk.css",
     "static/js/main.1dc9a7f1.chunk.js"
   ]
 }
