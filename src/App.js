@@ -134,13 +134,12 @@ export default class App extends Component {
         <Router>
           <div className='tc '>
             <div className='pa2 input' >
-              <button className="br3 pa1 bg-light-red mh4 " onClick={this.merge}>Random Film</button>
+              <button className="br3 pa1 bg-light-red mh2 " onClick={this.merge}>Random Film</button>
               <input
-                style={{ marginRight: '20px' }}
                 placeholder="Search video name"
-                className='pa3 ba b--green bg-light-blue'
+                className='pa3 ba b--green bg-light-blue put'
                 onChange={this.do} />
-              <select style={{ borderRadius: '5px', borderWidth: '2px' }} onChange={this.do}>
+              <select style={{ borderRadius: '5px', borderWidth: '2px' }} onChange={this.do} className='mh2'>
                 <option value="porn">Porn</option>
                 <option value="avgle">Avgle</option>
                 <option value="javcl">Javcl</option>

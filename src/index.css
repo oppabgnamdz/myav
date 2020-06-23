@@ -36,4 +36,8 @@ h1{
     justify-content: space-around;
     align-items: center;
   }
+  .put{
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
