@@ -132,9 +132,17 @@ export default class App extends Component {
           <div className='tc '>
             <div className='pa2'>
               <input
+                style={{ marginRight: '20px' }}
                 placeholder="Search video name"
                 className='pa3 ba b--green bg-light-blue'
                 onChange={this.do} />
+              <select style={{ borderRadius: '5px', borderWidth: '2px' }} onChange={this.do}>
+                <option value="porn">Porn</option>
+                <option value="avgle">Avgle</option>
+                <option value="javcl">Javcl</option>
+                <option value="javsub">Javsub</option>
+                <option value="fake">Fake</option>
+              </select>
             </div>
             <div className='page'>
               {this.button()}
@@ -165,11 +173,13 @@ export default class App extends Component {
               placeholder="Search video name"
               className='pa3 ba b--green bg-light-blue'
               onChange={this.do} />
+
+
           </div>
           <Scroll >
             <div className='mt4'>
               <div className="btn" style={{ marginBottom: '20px' }}>
-                <button  className="br3 pa1 bg-light-green mh5 back" style={{ display: 'block' }} onClick={this.click2}>
+                <button className="br3 pa1 bg-light-green mh5 back" style={{ display: 'block' }} onClick={this.click2}>
                   Back
                 </button>
               </div>
