@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
-import $ from 'jquery'
+// import $ from 'jquery'
 
 export default class Card extends Component {
     componentDidMount() {
-        for (let i = 0; i < this.props.number; i++) {
-            $(`.video${i}`).on('mouseenter', () => {
-                $(`.video${i}`).get(0).play();
-            })
-            $(`.video${i}`).on('mouseout', () => {
-                $(`.video${i}`).get(0).pause();
-            })
-        }
+        // console.log('nam dep troai')
+
+        // for (let i = 0; i < this.props.number; i++) {
+        //     $(`.video${i}`).on('mouseenter', () => {
+        //         $(`.video${i}`).get(0).play();
+        //     })
+        //     $(`.video${i}`).on('mouseout', () => {
+        //         $(`.video${i}`).get(0).pause();
+        //     })
+        // }
     }
 
     render() {
+
         let index = this.props.keys
         return (
             <div className="bg-light-green dib  br3 pa3 ma2 grow bw2 shadow-5 mt5" style={{ width: '350px' }}>

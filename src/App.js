@@ -43,15 +43,15 @@ export default class App extends Component {
     let arr = []
     for (let i = 0; i < tenItem; i++) {
       let allItem = this.state.data.map((d, i) => {
-        let preview = null;
-        try {
-          preview = require(`./media/preview${d.id}.mp4`)
-        } catch{
+        // let preview = null;
+        // try {
+        //   preview = require(`./media/preview${d.id}.mp4`)
+        // } catch{
 
-        }
+        // }
         let logo = require(`./media/${d.id}.jpg`)
         return (
-          <Card title={d.title} number={this.state.data.length} src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={(i) => this.clickme(i)} />
+          <Card title={d.title} number={this.state.data.length} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={(i) => this.clickme(i)} />
         )
       })
       let newArrayItem = []
@@ -86,7 +86,6 @@ export default class App extends Component {
     }
     let data2 = this.state.data
     shuffleArray(data2);
-    console.log(data2[0])
     this.setState({
       data: data2
     })
@@ -122,15 +121,15 @@ export default class App extends Component {
   render() {
     let card = () => {
       let arr = this.state.data.map((d, i) => {
-        let preview = null;
-        try {
-          preview = require(`./media/preview${d.id}.mp4`)
-        } catch{
+        // let preview = null;
+        // try {
+        //   preview = require(`./media/preview${d.id}.mp4`)
+        // } catch{
 
-        }
+        // }
         let logo = require(`./media/${d.id}.jpg`)
         return (
-          <Card title={d.title} src={preview} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
+          <Card title={d.title} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
         )
       }
       )
