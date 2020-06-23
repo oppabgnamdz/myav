@@ -144,7 +144,7 @@ export default class App extends Component {
       return (
         <Router>
           <div className='tc '>
-            <div className='pa2' >
+            <div className='pa2 input' >
               <button className="br3 pa1 bg-light-red mh4 " onClick={this.merge}>Random Film</button>
               <input
                 style={{ marginRight: '20px' }}
