@@ -43,12 +43,7 @@ export default class App extends Component {
     let arr = []
     for (let i = 0; i < tenItem; i++) {
       let allItem = this.state.data.map((d, i) => {
-        // let preview = null;
-        // try {
-        //   preview = require(`./media/preview${d.id}.mp4`)
-        // } catch{
-
-        // }
+      
         let logo = require(`./media/${d.id}.jpg`)
         return (
           <Card title={d.title} number={this.state.data.length} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={(i) => this.clickme(i)} />
@@ -121,12 +116,7 @@ export default class App extends Component {
   render() {
     let card = () => {
       let arr = this.state.data.map((d, i) => {
-        // let preview = null;
-        // try {
-        //   preview = require(`./media/preview${d.id}.mp4`)
-        // } catch{
-
-        // }
+       
         let logo = require(`./media/${d.id}.jpg`)
         return (
           <Card title={d.title} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
