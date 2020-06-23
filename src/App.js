@@ -77,6 +77,20 @@ export default class App extends Component {
       })
     }
   }
+  merge = () => {
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+    let data2 = this.state.data
+    shuffleArray(data2);
+    console.log(data2[0])
+    this.setState({
+      data: data2
+    })
+  }
 
   button = () => {
     let item = this.state.data.length / 10
@@ -130,7 +144,8 @@ export default class App extends Component {
       return (
         <Router>
           <div className='tc '>
-            <div className='pa2'>
+            <div className='pa2' >
+              <button className="br3 pa1 bg-light-red mh4 " onClick={this.merge}>Random Film</button>
               <input
                 style={{ marginRight: '20px' }}
                 placeholder="Search video name"
