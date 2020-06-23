@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "115af3300b171a285f7270ed93a5722b",
+    "revision": "8fd9187a6ffe7a9e10bf2d1c2e755617",
     "url": "/myav/index.html"
   },
   {
-    "revision": "53f1e3bb9c0324d9db9d",
+    "revision": "bf2ca7a85a1335bea652",
     "url": "/myav/static/css/2.3b6f1bda.chunk.css"
   },
   {
-    "revision": "e8048748cd28366fd3f1",
+    "revision": "79d42a4490974b82e3ad",
     "url": "/myav/static/css/main.c3656cf4.chunk.css"
   },
   {
-    "revision": "53f1e3bb9c0324d9db9d",
-    "url": "/myav/static/js/2.c206ef0e.chunk.js"
+    "revision": "bf2ca7a85a1335bea652",
+    "url": "/myav/static/js/2.5cda0cf4.chunk.js"
   },
   {
-    "revision": "ffa35a34964860fdc97ed79ca9abd27c",
-    "url": "/myav/static/js/2.c206ef0e.chunk.js.LICENSE.txt"
+    "revision": "c64c486544348f10a6d6c716950bc223",
+    "url": "/myav/static/js/2.5cda0cf4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e8048748cd28366fd3f1",
-    "url": "/myav/static/js/main.ddcd4c8f.chunk.js"
+    "revision": "79d42a4490974b82e3ad",
+    "url": "/myav/static/js/main.01de474b.chunk.js"
   },
   {
     "revision": "5abe8f3cb9d4e5f1351a",
@@ -562,117 +562,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0e77fe518c472af29b76856acfc01c8c",
     "url": "/myav/static/media/99.0e77fe51.jpg"
-  },
-  {
-    "revision": "c0fe546db8f5bc89004d694e70ee91c3",
-    "url": "/myav/static/media/preview1.c0fe546d.mp4"
-  },
-  {
-    "revision": "ea2c6b1d66a54923e9edc48ed791a7d2",
-    "url": "/myav/static/media/preview10.ea2c6b1d.mp4"
-  },
-  {
-    "revision": "e405e56592fa2bba446e5e1f047498a6",
-    "url": "/myav/static/media/preview11.e405e565.mp4"
-  },
-  {
-    "revision": "939e0ce9af1daa05801a93e838aa5219",
-    "url": "/myav/static/media/preview12.939e0ce9.mp4"
-  },
-  {
-    "revision": "2b5f77058fe334e2558990e946846276",
-    "url": "/myav/static/media/preview13.2b5f7705.mp4"
-  },
-  {
-    "revision": "28b2461773f0682abc06eddc1bf829db",
-    "url": "/myav/static/media/preview14.28b24617.mp4"
-  },
-  {
-    "revision": "2a35f0d1ca330a5e7d9f3988fdf812b8",
-    "url": "/myav/static/media/preview15.2a35f0d1.mp4"
-  },
-  {
-    "revision": "b7e69f4f13db5fa9a6c04e3a4eaae2a0",
-    "url": "/myav/static/media/preview16.b7e69f4f.mp4"
-  },
-  {
-    "revision": "3db77157236973318544f55a032da0b7",
-    "url": "/myav/static/media/preview17.3db77157.mp4"
-  },
-  {
-    "revision": "8fbee414a9a1f84c297b886bb70df62a",
-    "url": "/myav/static/media/preview18.8fbee414.mp4"
-  },
-  {
-    "revision": "a4e4bdb5fa2c8d2bb74ec47bd2e0338b",
-    "url": "/myav/static/media/preview19.a4e4bdb5.mp4"
-  },
-  {
-    "revision": "a515636f02b7869efe97fc1b6111db79",
-    "url": "/myav/static/media/preview2.a515636f.mp4"
-  },
-  {
-    "revision": "d53c64bfe893466fbf907e39c6eb1054",
-    "url": "/myav/static/media/preview20.d53c64bf.mp4"
-  },
-  {
-    "revision": "079f5d1a539e5bf4ce80e3d57559f598",
-    "url": "/myav/static/media/preview21.079f5d1a.mp4"
-  },
-  {
-    "revision": "e0ecf51b7dedaf416153e1568cdc393d",
-    "url": "/myav/static/media/preview22.e0ecf51b.mp4"
-  },
-  {
-    "revision": "3654c53ca785b054655450f8a9b0fb56",
-    "url": "/myav/static/media/preview23.3654c53c.mp4"
-  },
-  {
-    "revision": "1bdfa76092f065f9a4893adbe1b2b551",
-    "url": "/myav/static/media/preview24.1bdfa760.mp4"
-  },
-  {
-    "revision": "2dba0d5d92fc6abcc2b71d1f55c82057",
-    "url": "/myav/static/media/preview25.2dba0d5d.mp4"
-  },
-  {
-    "revision": "b7afd2bfefbbe5c3d3fc6ed497dd5692",
-    "url": "/myav/static/media/preview26.b7afd2bf.mp4"
-  },
-  {
-    "revision": "f5b80f5874a2ed5c78885d7d6de367a1",
-    "url": "/myav/static/media/preview27.f5b80f58.mp4"
-  },
-  {
-    "revision": "d54e6d52d673aeed121d6057907b441b",
-    "url": "/myav/static/media/preview28.d54e6d52.mp4"
-  },
-  {
-    "revision": "774e7842aea2b9c14374194de52f4a8e",
-    "url": "/myav/static/media/preview3.774e7842.mp4"
-  },
-  {
-    "revision": "150eb2c7e0cda5d632910aaf1d752516",
-    "url": "/myav/static/media/preview4.150eb2c7.mp4"
-  },
-  {
-    "revision": "3b106c4ffa2770d490ee6ff632c2d65f",
-    "url": "/myav/static/media/preview5.3b106c4f.mp4"
-  },
-  {
-    "revision": "9fb1d46b6e7f60f55cc22c1661a59292",
-    "url": "/myav/static/media/preview6.9fb1d46b.mp4"
-  },
-  {
-    "revision": "711a39819a625c1c241d67a0ff613e93",
-    "url": "/myav/static/media/preview7.711a3981.mp4"
-  },
-  {
-    "revision": "a0523ac2a6d73b6410496ce38ec4b3b7",
-    "url": "/myav/static/media/preview8.a0523ac2.mp4"
-  },
-  {
-    "revision": "afff40689ad759d0ac3d23c9110bf8db",
-    "url": "/myav/static/media/preview9.afff4068.mp4"
   }
 ]);
