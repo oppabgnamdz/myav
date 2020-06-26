@@ -145,6 +145,7 @@ export default class App extends Component {
                 <option value="javcl">Javcl</option>
                 <option value="javsub">Javsub</option>
                 <option value="fake">Fake</option>
+                <option value="xxphim">XXPhim</option>
               </select>
             </div>
             <div className='page'>
