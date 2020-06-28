@@ -181,10 +181,10 @@ export default class App extends Component {
               </select>
             </div>
             <div className='font-icon'>
-              <Link to={`${this.state.number - 1}`} onClick={this.previous}>
+              <Link to={`/${this.state.number - 1}`} onClick={this.previous}>
                 <FontAwesomeIcon icon={faChevronCircleLeft} className='previous' />
               </Link>
-              <Link to={`${this.state.number + 1}`} onClick={this.next}>
+              <Link to={`/${this.state.number + 1}`} onClick={this.next}>
                 <FontAwesomeIcon icon={faChevronCircleRight} className='next' />
               </Link>
             </div>
@@ -205,12 +205,12 @@ export default class App extends Component {
 
             <h2 className='thanks' style={{ color: 'red' }}>Thanks for watching!   </h2>
             <div className='font-icon'>
-              <Link to={`${this.state.number - 1}`} onClick={this.previous}>
+              <Link to={`/${this.state.number - 1}`} onClick={this.previous}>
                 <FontAwesomeIcon icon={faChevronCircleLeft} className='previous' />
               </Link>
               <h2 style={{ color: 'red' }}>Thanks for watching!   </h2>
 
-              <Link to={`${this.state.number + 1}`} onClick={this.next}>
+              <Link to={`/${this.state.number + 1}`} onClick={this.next}>
                 <FontAwesomeIcon icon={faChevronCircleRight} className='next' />
               </Link>
             </div>
