@@ -8,6 +8,8 @@ import {
 import Card from './Card';
 import Data from './Data'
 import Scroll from './Scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 
 export default class App extends Component {
   constructor() {
@@ -15,7 +17,8 @@ export default class App extends Component {
     this.state = {
       data: Data,
       click: false,
-      src: ''
+      src: '',
+      number: 1
     }
   }
   do = (e) => {
@@ -43,7 +46,7 @@ export default class App extends Component {
     let arr = []
     for (let i = 0; i < tenItem; i++) {
       let allItem = this.state.data.map((d, i) => {
-      
+
         let logo = require(`./media/${d.id}.jpg`)
         return (
           <Card title={d.title} number={this.state.data.length} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={(i) => this.clickme(i)} />
@@ -96,7 +99,7 @@ export default class App extends Component {
         s = '/'
       }
       arr.push(
-        <div style={{ marginRight: '7px', display: 'inline-block' }} key={i}>
+        <div className="btnRoute" style={{ marginRight: '7px', display: 'inline-block' }} key={i}>
           <Link to={s}  >
             <button style={{ color: 'red', padding: 10, borderWidth: '2px', borderRadius: 5, borderColor: '#1f7cf4', backgroundColor: '#f4efef' }} onClick={() => { this.homeClick(i) }}  >
               {i + 1}
@@ -111,12 +114,40 @@ export default class App extends Component {
 
     return arr;
   }
+  next = () => {
+    let item = parseInt(this.state.data.length / 10 + 1);
+    if (this.state.number >= item - 1) {
+      this.setState({
+        number: 0
+      })
+    } else {
+      this.setState({
+        number: this.state.number + 1
+      })
+    }
+
+
+
+  }
+  previous = () => {
+
+    this.setState({
+      number: this.state.number - 1
+    })
+    if (this.state.number <= 1) {
+      this.setState({
+        number: 1
+      })
+    }
+
+  }
 
 
   render() {
+    console.log(this.state.number)
     let card = () => {
       let arr = this.state.data.map((d, i) => {
-       
+
         let logo = require(`./media/${d.id}.jpg`)
         return (
           <Card title={d.title} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
@@ -146,7 +177,16 @@ export default class App extends Component {
                 <option value="javsub">Javsub</option>
                 <option value="fake">Fake</option>
                 <option value="xxphim">XXPhim</option>
+
               </select>
+            </div>
+            <div className='font-icon'>
+              <Link to={`${this.state.number - 1}`} onClick={this.previous}>
+                <FontAwesomeIcon icon={faChevronCircleLeft} className='previous' />
+              </Link>
+              <Link to={`${this.state.number + 1}`} onClick={this.next}>
+                <FontAwesomeIcon icon={faChevronCircleRight} className='next' />
+              </Link>
             </div>
             <div className='page'>
               {this.button()}
@@ -162,7 +202,19 @@ export default class App extends Component {
               {this.button()}
             </div>
 
-            <h2 style={{ color: 'red' }}>Thanks for watching!</h2>
+
+            <h2 className='thanks' style={{ color: 'red' }}>Thanks for watching!   </h2>
+            <div className='font-icon'>
+              <Link to={`${this.state.number - 1}`} onClick={this.previous}>
+                <FontAwesomeIcon icon={faChevronCircleLeft} className='previous' />
+              </Link>
+              <h2 style={{ color: 'red' }}>Thanks for watching!   </h2>
+
+              <Link to={`${this.state.number + 1}`} onClick={this.next}>
+                <FontAwesomeIcon icon={faChevronCircleRight} className='next' />
+              </Link>
+            </div>
+
 
           </div>
 
