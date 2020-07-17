@@ -141,10 +141,14 @@ export default class App extends Component {
     }
 
   }
+  componentWillMount(){
+    this.merge()
+
+  }
+  //merge before render
 
 
   render() {
-    console.log(this.state.number)
     let card = () => {
       let arr = this.state.data.map((d, i) => {
 
