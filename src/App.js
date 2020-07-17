@@ -145,7 +145,7 @@ export default class App extends Component {
     this.merge()
 
   }
-  //merge before render
+  //merge before render22
 
 
   render() {

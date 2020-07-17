@@ -22,7 +22,7 @@ export default class Card extends Component {
             <div className="bg-light-green dib  br3 pa3 ma2 grow bw2 shadow-5 mt5" style={{ width: '350px' }}>
                 <h1 style={{ textOverflow: 'ellipsis', overflow: 'hidden' }}>{this.props.name}</h1>
                 <h1 style={{ color: 'orange' }}>{this.props.title}</h1>
-                <button
+                <div
                     onClick={() => this.props.click(index)}
                     href={this.props.href}>
                     <video
@@ -31,7 +31,7 @@ export default class Card extends Component {
                         src={this.props.src} className={`video${this.props.keys}`} poster={this.props.poster}> Video
                         ảo
                         </video>
-                </button>
+                </div>
             </div >
         )
     }
