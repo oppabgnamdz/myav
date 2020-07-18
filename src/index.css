@@ -77,3 +77,8 @@ h1{
 button:focus{
   outline: none;
 }
+@media(max-width:375px){
+  .iphone5{
+    width: 300px!important;
+  }
+}
