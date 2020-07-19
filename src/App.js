@@ -24,7 +24,7 @@ export default class App extends Component {
   do = (e) => {
     const edit = e.target.value
     this.setState((state) => {
-      let arr = Data.filter((d) => d.name.toLowerCase().includes(edit.toLowerCase()))
+      let arr = Data.filter((d) => d.title.toLowerCase().includes(edit.toLowerCase()))
       return { data: arr }
     })
   }
