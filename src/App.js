@@ -28,6 +28,13 @@ export default class App extends Component {
       return { data: arr }
     })
   }
+  do2 = (e) => {
+    const edit = e.target.value
+    this.setState((state) => {
+      let arr = Data.filter((d) => d.name.toLowerCase().includes(edit.toLowerCase()))
+      return { data: arr }
+    })
+  }
   clickme = (i) => {
     const src = this.state.data[i].href
     this.setState({
@@ -174,7 +181,7 @@ export default class App extends Component {
                 placeholder="Search video name"
                 className='pa3 ba b--green bg-light-blue put'
                 onChange={this.do} />
-              <select style={{ borderRadius: '5px', borderWidth: '2px' }} onChange={this.do} className='mh2'>
+              <select style={{ borderRadius: '5px', borderWidth: '2px' }} onChange={this.do2} className='mh2'>
                 <option value="porn">Porn</option>
                 <option value="avgle">Avgle</option>
                 <option value="javcl">Javcl</option>
