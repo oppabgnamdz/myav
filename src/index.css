@@ -23,6 +23,9 @@ h1{
 .font-icon{
   display: none;
 }
+.activity2{
+  background-color: #282828;
+}
 @media (max-width:480px){
   iframe{
     height: 250px;

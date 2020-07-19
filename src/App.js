@@ -227,7 +227,7 @@ export default class App extends Component {
       )
     } else {
       return (
-        <div className='tc'>
+        <div className='tc activity2'>
           <div className='pa2'>
             <input
               placeholder="Search video name"
