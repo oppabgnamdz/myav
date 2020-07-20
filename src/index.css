@@ -23,6 +23,12 @@ h1{
 .font-icon{
   display: none;
 }
+.titleForFilm{
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  color: orange;
+}
 .activity2{
   background-color: #282828;
 }

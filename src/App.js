@@ -18,7 +18,8 @@ export default class App extends Component {
       data: Data,
       click: false,
       src: '',
-      number: 1
+      number: 1,
+      title: ''
     }
   }
   do = (e) => {
@@ -37,9 +38,11 @@ export default class App extends Component {
   }
   clickme = (i) => {
     const src = this.state.data[i].href
+    const title = this.state.data[i].title
     this.setState({
       click: true,
-      src: src
+      src: src,
+      title: title
     })
 
   }
@@ -148,7 +151,7 @@ export default class App extends Component {
     }
 
   }
-  componentWillMount(){
+  componentWillMount() {
     this.merge()
 
   }
@@ -250,6 +253,7 @@ export default class App extends Component {
                   Back
                 </button>
               </div>
+              <h1 className="titleForFilm">{this.state.title}</h1>
               <iframe width="80%" height="700" src={this.state.src} title="av" frameBorder="0" allow="accelerometer; autoPlay; encrypted-media; gyroscope;
 picture-in-picture" allowFullScreen></iframe>
             </div>
