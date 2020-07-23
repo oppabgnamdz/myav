@@ -252,8 +252,9 @@ export default class App extends Component {
                 <button className="br3 pa1 bg-light-green mh5 back" style={{ display: 'block' }} onClick={this.click2}>
                   Back
                 </button>
+                <h1 className="titleForFilm">{this.state.title}</h1>
               </div>
-              <h1 className="titleForFilm">{this.state.title}</h1>
+              
               <iframe width="80%" height="700" src={this.state.src} title="av" frameBorder="0" allow="accelerometer; autoPlay; encrypted-media; gyroscope;
 picture-in-picture" allowFullScreen></iframe>
             </div>
