@@ -13,6 +13,7 @@ import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-sol
 
 export default class App extends Component {
   constructor() {
+    console.log('constructor')
     super();
     this.state = {
       data: Data,
@@ -81,9 +82,16 @@ export default class App extends Component {
   homeClick = (e) => {
     if (e === 0) {
       this.setState({
-        data: Data
+        data: this.state.data
       })
     }
+  }
+  reverse = () => {
+    let data2 = this.state.data;
+    let reversedList = data2.map((e, i, a) => a[(a.length - 1) - i])
+    this.setState({
+      data: reversedList
+    })
   }
   merge = () => {
     function shuffleArray(array) {
@@ -151,14 +159,17 @@ export default class App extends Component {
     }
 
   }
-  componentWillMount() {
-    this.merge()
+  componentDidMount() {
+    this.reverse()
 
   }
+
   //merge before render22
 
 
+
   render() {
+    console.log(this.state.data)
     let card = () => {
       let arr = this.state.data.map((d, i) => {
 
@@ -254,7 +265,7 @@ export default class App extends Component {
                 </button>
                 <h1 className="titleForFilm">{this.state.title}</h1>
               </div>
-              
+
               <iframe width="80%" height="700" src={this.state.src} title="av" frameBorder="0" allow="accelerometer; autoPlay; encrypted-media; gyroscope;
 picture-in-picture" allowFullScreen></iframe>
             </div>
