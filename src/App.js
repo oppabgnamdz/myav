@@ -13,7 +13,6 @@ import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-sol
 
 export default class App extends Component {
   constructor() {
-    console.log('constructor')
     super();
     this.state = {
       data: Data,
@@ -58,7 +57,7 @@ export default class App extends Component {
     for (let i = 0; i < tenItem; i++) {
       let allItem = this.state.data.map((d, i) => {
 
-        let logo = require(`./media/${d.id}.jpg`)
+        let logo = d.image
         return (
           <Card title={d.title} number={this.state.data.length} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={(i) => this.clickme(i)} />
         )
@@ -160,20 +159,35 @@ export default class App extends Component {
 
   }
   componentDidMount() {
-    this.reverse()
+    // let that = this;
+    // var database = firebase.database();
+    // const cloneFirebase = []
+
+    // async function getData() {
+    //   await database.ref('/arr/').once('value').then(function (snapshot) {
+    //     snapshot.val().map(a => {
+    //       cloneFirebase.push(a)
+    //     })
+    //   });
+    //   that.setState({
+    //     data: cloneFirebase
+    //   })
+    // }
+    // getData();
+    this.reverse();
+
 
   }
+
 
   //merge before render22
 
 
 
   render() {
-    console.log(this.state.data)
     let card = () => {
       let arr = this.state.data.map((d, i) => {
-
-        let logo = require(`./media/${d.id}.jpg`)
+        let logo = d.image
         return (
           <Card title={d.title} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
         )
