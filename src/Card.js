@@ -14,7 +14,7 @@ export default class Card extends Component {
         //     })
         // }
     }
-     //ahihis
+     //ahihis viet namemse
 
     render() {
 
