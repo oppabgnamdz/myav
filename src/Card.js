@@ -14,6 +14,7 @@ export default class Card extends Component {
         //     })
         // }
     }
+     //ahihis
 
     render() {
 
