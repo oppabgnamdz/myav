@@ -11,6 +11,7 @@ import Scroll from './Scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
   //toi la ahihi
+  //chihi
 export default class App extends Component {
   constructor() {
     super();
