@@ -102,7 +102,8 @@ export default class App extends Component {
     let data2 = this.state.data
     shuffleArray(data2);
     this.setState({
-      data: data2
+      data: data2,
+      src: data2[0].href
     })
   }
 
@@ -185,110 +186,29 @@ export default class App extends Component {
 
 
   render() {
-    let card = () => {
-      let arr = this.state.data.map((d, i) => {
-        let logo = d.image
-        return (
-          <Card title={d.title} poster={logo} keys={i} key={i} name={d.name} href={d.href} click={this.clickme} number={this.state.data.length} />
-        )
-      }
-      )
-      let arrpage1 = []
-      for (let i = 0; i < arr.length && i < 10; i++) {
-        arrpage1.push(arr[i])
-      }
-      return arrpage1
-    }
-    if (!this.state.click) {
-      return (
-        <Router>
-          <div className='tc '>
-            <div className='pa2 input' >
-              <button className="br3 pa1 bg-light-red mh2 " onClick={this.merge}>Random Film</button>
-              <input
-                placeholder="Search video name"
-                className='pa3 ba b--green bg-light-blue put'
-                onChange={this.do} />
-              <select style={{ borderRadius: '5px', borderWidth: '2px' }} onChange={this.do2} className='mh2'>
-                <option value="porn">Porn</option>
-                <option value="avgle">Avgle</option>
-                <option value="javcl">Javcl</option>
-                <option value="javsub">Javsub</option>
-                <option value="fake">Fake</option>
-                <option value="xxphim">XXPhim</option>
+    return (
+      <div className='tc activity2'>
+        <div className='pa2'>
+          <button className="br3 pa1 bg-light-red mh2 " onClick={this.merge}>Random Film</button>
 
-              </select>
-            </div>
-            <div className='font-icon'>
-              <Link to={`/${this.state.number - 1}`} onClick={this.previous}>
-                <FontAwesomeIcon icon={faChevronCircleLeft} className='previous' />
-              </Link>
-              <Link to={`/${this.state.number + 1}`} onClick={this.next}>
-                <FontAwesomeIcon icon={faChevronCircleRight} className='next' />
-              </Link>
-            </div>
-            <div className='page'>
-              {this.button()}
-
-              <Switch>
-                {this.route()}
-                <Route path='/'>
-                  <Scroll>
-                    {card()}
-                  </Scroll>
-                </Route>
-              </Switch>
-              {this.button()}
-            </div>
-
-
-            <h2 className='thanks' style={{ color: 'red' }}>Thanks for watching!   </h2>
-            <div className='font-icon'>
-              <Link to={`/${this.state.number - 1}`} onClick={this.previous}>
-                <FontAwesomeIcon icon={faChevronCircleLeft} className='previous' />
-              </Link>
-              <h2 style={{ color: 'red' }}>Thanks for watching!   </h2>
-
-              <Link to={`/${this.state.number + 1}`} onClick={this.next}>
-                <FontAwesomeIcon icon={faChevronCircleRight} className='next' />
-              </Link>
-            </div>
-
-
-          </div>
-
-        </Router >
-
-      )
-    } else {
-      return (
-        <div className='tc activity2'>
-          <div className='pa2'>
-            <input
-              placeholder="Search video name"
-              className='pa3 ba b--green bg-light-blue'
-              onChange={this.do} />
-
-
-          </div>
-          <Scroll >
-            <div className='mt4'>
-              <div className="btn" style={{ marginBottom: '20px' }}>
-                <button className="br3 pa1 bg-light-green mh5 back" style={{ display: 'block' }} onClick={this.click2}>
-                  Back
-                </button>
-                <h1 className="titleForFilm">{this.state.title}</h1>
-              </div>
-
-              <iframe width="80%" height="700" src={this.state.src} title="av" frameBorder="0" allow="accelerometer; autoPlay; encrypted-media; gyroscope;
-picture-in-picture" allowFullScreen></iframe>
-            </div>
-          </Scroll>
-          <h2 style={{ color: 'red' }}>Thanks for watching!</h2>
 
         </div>
+        <Scroll >
+          <div className='mt4'>
+            <div className="btn" style={{ marginBottom: '20px' }}>
 
-      )
-    }
+
+            </div>
+
+            <iframe width="80%" height="700" src={this.state.src} title="av" frameBorder="0" allow="accelerometer; autoPlay; encrypted-media; gyroscope;
+picture-in-picture" allowFullScreen></iframe>
+          </div>
+        </Scroll>
+        <h2 style={{ color: 'red' }}>Thanks for watching!</h2>
+      
+
+      </div>
+
+    )
   }
 }
